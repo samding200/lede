@@ -135,6 +135,21 @@ jobs:
           CONFIG_PACKAGE_kmod-usb2-pci=y
           CONFIG_PACKAGE_kmod-usb3=y
           EOF
+          # 4G网卡支持:
+          cat >> .config <<EOF
+          CONFIG_PACKAGE_kmod-usb-core=y
+          CONFIG_PACKAGE_kmod-usb-net=y
+          CONFIG_PACKAGE_kmod-net-cdc-ether=y
+          CONFIG_PACKAGE_kmod-net-cdc-mbim=y
+          CONFIG_PACKAGE_kmod-net-cdc-ncm=y
+          CONFIG_PACKAGE_kmod-net-cdc-subset=y
+          CONFIG_PACKAGE_kmod-net-cdc-qmi-wwan=y
+          CONFIG_PACKAGE_kmod-serial=y
+          CONFIG_PACKAGE_kmod-serial-option=y
+          CONFIG_PACKAGE_kmod-serial-wwan=y
+          CONFIG_PACKAGE_kmod-uhci=y
+          CONFIG_PACKAGE_kmod-net-cdc-subset=y
+          EOF
           # 常用LuCI插件选择:
           cat >> .config <<EOF
           CONFIG_PACKAGE_luci-app-adbyby-plus=y
